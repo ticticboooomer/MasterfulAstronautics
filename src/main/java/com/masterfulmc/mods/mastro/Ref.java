@@ -6,6 +6,10 @@ public class Ref {
     public static final String ID = "mastro";
 
     public static ResourceLocation id(String path) {
-        return new ResourceLocation(ID, path);
+        return ResourceLocation.fromNamespaceAndPath(ID, path);
+    }
+
+    public static class Registries {
+        public static final ResourceLocation PLANETS = id("planets");
     }
 }
